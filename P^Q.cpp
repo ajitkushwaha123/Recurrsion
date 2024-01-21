@@ -3,11 +3,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int ans(int p , int q)
+int power(int p , int q)
 {
-    if(q == 1) return p;
+    if(q == 0) return 1;
 
-    return p*ans(p , q - 1);   
+    return p*power(p , q-1);
 }
 
 int main()
@@ -15,5 +15,5 @@ int main()
     int p , q;
     cin>>p>>q;
 
-    cout<<ans( p , q )<<endl;
+    cout<<power( p , q )<<endl;
 }
